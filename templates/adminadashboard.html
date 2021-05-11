@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER | LOGIN</title>
+        <!-- favicon -->
+        <!-- <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon"> -->
+        <!-- <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"> -->
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-32x32.png">
+        <!-- bootstrap css cdn -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <!-- css stylesheet -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- font styles cdn -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600&display=swap" rel="stylesheet">
+<style>
+    .ABCD{
+
+        height:300px ;
+        width: 300px;
+        background-color: red;
+        border-radius: 100%;
+       
+        text-decoration-color: blue;
+        font-size: 30px;
+        float: left;
+        margin: 210px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+       
+    }
+    h1{
+        text-align: center;
+        height: 50px;
+        width: 300px;
+    }
+    .LLL{
+        margin-top: 0px;
+        background-color:blue;
+        height:60px ;
+        width: 100%;
+       
+    }
+    .lloki{
+        margin-top: 0px;
+        background-color:blue;
+        height:5% ;
+        width:100%;
+        text-align: right;
+        font-size: 15px;
+        margin-left: 0%;}
+    .llokia{
+        margin-top: 0px;
+        background-color:blue;
+        height:113px ;
+        width:100%;
+        text-align:center;
+        font-size: 15px;
+        margin-left: 0%;
+       
+    }
+    .loki {
+        height: 0px;
+        width: 50%;
+        font-size: 200px;
+        margin-top: 0px;
+        margin-left: 100%;
+        align-items: right;
+    }
+    .XYZ{
+
+        height:300px ;
+        width: 300px;
+        background-color:yellow;
+        border-radius: 100%;
+        text-align: center;
+        float:left;
+        text-decoration-color: green;
+        font-size: 30px;
+        margin: 210px;
+        margin-top: 50px;
+    
+}
+.ABCDE
+{
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
+.XYZA
+{
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
+    </style>
+
+<style>
+    .container
+    {
+      background-color: yellow;
+    }
+    .our-focus 
+    {
+      background-color: yellow;
+    }
+    .site-footer
+    {
+      background-color: yellow;
+    }
+
+    .container-fluid{
+      background-color:yellow;
+      width: 100%;
+    }
+    body{
+      background-color:yellow;
+    }
+    .navbar{
+      background-color:yellow;
+    }
+  </style></head>
+<body>
+    <!-- bootstrap navbar -->
+    <div class="logo mt-3 text-center">
+       
+    </div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="main-logo-img mt-3" href="#"><img src="/static/img/logo.jpg" alt="sheep-logo" height="80px" width="80%">
+            <!-- <a class="navbar-brand" href="index.html">JobPortal</a> -->
+          </a>
+          
+          <div class="row donate-sponsor">
+            <a type="button" class="btn btn-success mr-1" id="donate" href="homepage">Home Page</a>
+            <a type="button" class="btn btn-warning mr-1" id="sponsor" href="adminlogin">Admin Login Page</a>
+            <a type="button" class="btn btn-primary mr-1" id="sponsor" href="homepage">Logout</a>
+             <a type="button" class="btn btn-danger mr-1" id="sponsor" href="contactus">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar ends -->
+    <!-- Login form -->
+    <div class="LLL">
+    <div class="ABCD">
+        <div class="ABCDE"> <h1>Total Amount Give<br/>{{ak}}{{ac}}</h1></div>
+
+        </div>
+        <div class="XYZ">
+            <div class="XYZA">   <h1>Total Pending Amount<br/>{{am}}{{ac}}</h1></div>
+    
+            </div></div>
+            <div class="lloki">
+                <a type="button" class="btn btn-danger mr-1" id="addpur" href="adminsendmsgpyltr">Click here to Sending Messages to Customers</a>
+
+            </div>
+
+            
+            
+            <section class="our-focus">
+                <div class="container">
+                  <h2 class="text-center mt-3">Registered Customers details</h2>
+                  <div class="border">
+                  
+             <table border="5pt" >
+                  
+                  <tr style="color:red;font-size:52px" >
+                  <td>ID</td>
+                  <td>User Name</td>
+                  <td>Email</td>
+                  <td>You Give</td>
+                  <td>Pending</td>
+                  
+                  </th></tr><br/>
+                  
+                  
+               {% for row in account %}
+               <tr>  
+         
+                                     
+                                
+                                
+                 
+                                <td>{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[2] }}</td>
+                                <td>{{ row[3] }}</td>
+                                <td>{{ row[4] }}</td>
+                                </tr>
+                                
+               {%endfor%}	
+            </table>
+                  
+    </section>
+
+
+           </body>
+</html>
+
